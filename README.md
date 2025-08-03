@@ -17,7 +17,7 @@ Let's start building! 💻
 **Objective:** Master the core concepts of React to build dynamic, component-based user interfaces.
 
 #### Core Exercises
-- [ ] **Setup**: Create a new React project using **Vite**.
+- [x] **Setup**: Create a new React project using **Vite**.
 > **Goal**: Understand the modern frontend tooling ecosystem. Vite provides a faster development experience than older tools like Create React App.
 
 - [ ] **Static UI**: Create an `App` component that renders a title and a hard-coded list of tasks.
