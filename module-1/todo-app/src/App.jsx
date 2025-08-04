@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import TaskItem from "./components/TaskItem";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todo, setTodo] = useState("");
+
+  const [taskList, setTaskList] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTaskList((prev) => [...prev, { text: todo, completed: false }]);
+    setTodo("");
+  };
+
+  const deleteTodo = (id) => {
+    const filteredArray = taskList.filter((_, index) => id != index);
+    setTaskList(filteredArray);
+  };
+
+  const toggleTodo = (id) => {
+    setTaskList((prev) =>
+      prev.map((task, index) =>
+        index == id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
 
   return (
-    <>
+    <div className="container">
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Todo App</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Enter Todo"
+            value={todo}
+            onChange={(e) => {
+              setTodo(e.target.value);
+            }}
+          />
+          <button className="submitBtn" type="submit">
+            Add
+          </button>
+        </form>
+        <TaskItem
+          arr={taskList}
+          deleteTodo={deleteTodo}
+          toggleTodo={toggleTodo}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
