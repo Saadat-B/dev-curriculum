@@ -19,9 +19,9 @@ Let's start building! 💻
 #### Core Exercises
 - ✅ **Setup**: Create a new React project using **Vite**.
 - ✅ **Static UI**: Create an `App` component that renders a title and a hard-coded list of tasks.
-- ⬜ **Components**: Create a separate `TaskItem` component and render a list by mapping over a hard-coded array.
-- ⬜ **State**: Use the `useState` hook to manage the array of tasks.
-- ⬜ **Adding Tasks**: Create a form with a controlled input to add new tasks.
+- ✅ **Components**: Create a separate `TaskItem` component and render a list by mapping over a hard-coded array.
+- ✅ **State**: Use the `useState` hook to manage the array of tasks.
+- ✅ **Adding Tasks**: Create a form with a controlled input to add new tasks.
 - ⬜ **Deleting Tasks**: Pass a function as a prop from `App` down to `TaskItem` to handle deletion.
 - ⬜ **Updating Tasks**: Pass a function to toggle a task's completion status.
 - ⬜ **Conditional Styling**: Apply different styles (e.g., `text-decoration: line-through`) to completed tasks.
