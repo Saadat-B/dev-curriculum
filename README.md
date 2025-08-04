@@ -20,7 +20,7 @@ Let's start building! 💻
 - [x] **Setup**: Create a new React project using **Vite**.
 > **Goal**: Understand the modern frontend tooling ecosystem. Vite provides a faster development experience than older tools like Create React App.
 
-- [ ] **Static UI**: Create an `App` component that renders a title and a hard-coded list of tasks.
+- [x] **Static UI**: Create an `App` component that renders a title and a hard-coded list of tasks.
 > **Goal**: Learn the basics of **JSX** syntax and how React renders elements to the DOM.
 
 - [ ] **Components**: Create a separate `TaskItem` component and render a list by mapping over a hard-coded array.
