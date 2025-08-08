@@ -28,7 +28,7 @@ Let's start building! 💻
 
 #### 🧩 Extensions (Optional)
 - ⬜ **Edit in Place**
-- ⬜ **Filtering**
+- ✅ **Filtering**
 - ⬜ **Animations**
 - ⬜ **Accessibility**
 - ⬜ **Error Boundaries**
